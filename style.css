@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --blue: #3ea1db;
+  --blue-dark: #574ae8;
+  --white: #fff;
+  --title: #313131;
+  --text: #b6b6b6;
+  --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+}
+
+body {
+  background-color: rgba(128, 128, 128, 0.137);
+}
+
+/* -------------------------------Inicio do Header------------------------------------- */
+header {
+  background: var(--linear);
+  color: var(--white);
+  padding: 2em 4em;
+}
+
+header #heading {
+  width: 90%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+#heading h1 {
+  font-size: 18px;
+}
+
+header #pesquisar {
+  width: 90%;
+  height: 44px;
+  margin: 0.4em auto;
+  padding: 0.8em 1em;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(80deg, #9a91fa 0%, #75c9fa 100%);
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  width: 44rem;
+  height: 40px;
+  border: none;
+  margin: 0.4em auto;
+  padding: 0.8em 3em;
+  background: linear-gradient(80deg, #9a91fa 0%, #75c9fa 100%);
+}
+
+::-webkit-input-placeholder {
+  color: var(--white);
+}
+
+#search:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+/* -----------------------------Fim do Header--------------------------------- */
+
+/* -----------------------------Inicio da Section -------------------------------- */
+section {
+  margin: 5rem 0;
+}
+
+section article {
+  width: 60%;
+  cursor: pointer;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--white);
+  box-shadow: 0 0 3px #ccc;
+  border-radius: 5px;
+}
+
+section .data {
+  display: flex;
+  justify-content: space-between;
+}
+
+article .pararafo {
+  color: var(--text);
+  font-size: 12px;
+}
+
+article .pararafo-one {
+  line-height: 24px;
+}
+
+article h1 {
+  color: var(--title);
+  font-size: 16px;
+  padding: 0.5rem 0;
+}
+
+article:hover {
+  transform: scale(1.2);
+}
+/* -------------------------------Fim da Section-------------------------------------*/
