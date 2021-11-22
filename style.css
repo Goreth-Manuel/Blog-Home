@@ -56,6 +56,7 @@ header #pesquisar {
   border: none;
   margin: 0.4em auto;
   padding: 0.8em 3em;
+  color: var(--white);
   background: linear-gradient(80deg, #9a91fa 0%, #75c9fa 100%);
 }
 
