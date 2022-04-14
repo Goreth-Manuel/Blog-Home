@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  outline: 0;
 }
 
 :root {
-  --blue: #3ea1db;
+  --blue-base: #3ea1db;
   --blue-dark: #574ae8;
   --white: #fff;
   --title: #313131;
@@ -14,49 +14,71 @@
   --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
 }
 
+html,
+body,
+#root {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 body {
+  font-size: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--white);
   background-color: rgba(128, 128, 128, 0.137);
 }
 
-/* -------------------------------Inicio do Header------------------------------------- */
+/* -------------------------------Inicio do Header--------------------------- */
+
 header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem;
   background: var(--linear);
-  color: var(--white);
-  padding: 2em 4em;
 }
 
-header #heading {
+header .heading {
   width: 90%;
-  margin: 0 auto 20px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--white);
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-#heading h1 {
+.heading h1 {
   font-size: 18px;
 }
 
-header #pesquisar {
+header .search-wrapper {
   width: 90%;
   height: 44px;
-  margin: 0.4em auto;
-  padding: 0.8em 1em;
+  display: flex;
+  align-items: center;
+  margin: 0.4rem auto;
+  padding-top: 0.8rem;
+  padding-right: 1rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1rem;
   border: none;
   border-radius: 5px;
   background: linear-gradient(80deg, #9a91fa 0%, #75c9fa 100%);
-  display: flex;
-  align-items: center;
 }
 
-#search {
+.search {
   width: 44rem;
   height: 40px;
-  border: none;
-  margin: 0.4em auto;
-  padding: 0.8em 3em;
+  margin: 0.4rem auto;
+  padding-top: 0.8rem;
+  padding-right: 3rem;
+  padding-bottom: 0.8rem;
+  padding-left: 3rem;
   color: var(--white);
+  border: none;
   background: linear-gradient(80deg, #9a91fa 0%, #75c9fa 100%);
 }
 
@@ -64,50 +86,53 @@ header #pesquisar {
   color: var(--white);
 }
 
-#search:focus {
+.search:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
-  outline: 0;
 }
 
-/* -----------------------------Fim do Header--------------------------------- */
+/* -----------------------------Fim do Header-------------------------------- */
 
-/* -----------------------------Inicio da Section -------------------------------- */
+/* -----------------------------Inicio da Section --------------------------- */
+
 section {
   margin: 5rem 0;
 }
 
 section article {
   width: 60%;
-  cursor: pointer;
   margin: 2rem auto;
   padding: 1.5rem;
-  background: var(--white);
-  box-shadow: 0 0 3px #ccc;
   border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 0 0 3px #ccc;
+  cursor: pointer;
+  transition: linear 200ms;
 }
 
-section .data {
+section .date {
   display: flex;
   justify-content: space-between;
 }
 
-article .pararafo {
+article .text {
   color: var(--text);
   font-size: 12px;
 }
 
-article .pararafo-one {
+article .paragraph {
   line-height: 24px;
 }
 
 article h1 {
-  color: var(--title);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 16px;
-  padding: 0.5rem 0;
+  color: var(--title);
 }
 
 article:hover {
   transform: scale(1.2);
 }
-/* -------------------------------Fim da Section-------------------------------------*/
+
+/* -------------------------------Fim da Section------------------------------*/
